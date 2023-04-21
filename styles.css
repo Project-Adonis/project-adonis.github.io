@@ -43,6 +43,17 @@ Screen
           box-shadow: 30px 30px 48px rgba(31,78,95,0.4);
 }
 
+@media (max-width: 850px) {
+  .screen {
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: 0;
+    transform: none;
+    box-shadow: none;
+  }
+}
+
 /*--------------------
 Navigation
 ---------------------*/
@@ -54,7 +65,7 @@ Navigation
   top: -1px;
   padding: 15px 25px;
   z-index: 9999;
-  
+  background-color: #fff;
   -webkit-transition: all 0.3s;
      -moz-transition: all 0.3s;
       -ms-transition: all 0.3s;
@@ -78,15 +89,15 @@ button:focus {
 .button-nav {
   height: 50px;
   padding: 0px 16px;
-  font-family:'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 16px;
   line-height: 38px;
   text-align: center;
   position: relative;
-	float: left;
-	background-color: transparent;
+  float: left;
+  background-color: transparent;
   border-bottom: 5px transparent solid;
-	color: rgba(0,0,0,0.6);
+  color: rgba(0,0,0,0.6);
   
   -webkit-transition: all 0.3s;
      -moz-transition: all 0.3s;
@@ -101,6 +112,34 @@ button:focus {
   color: #000;
 	border-bottom: 5px #000 solid;
 }
+
+.menu-toggle {
+  position: absolute;
+  top: 24px;
+  right: 25px;
+  display: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 2px;
+  background-color: #000;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.menu-toggle span:last-child {
+  margin-bottom: 0px;
+}
+
+.menu-toggle:hover span {
+  background-color: #555;
+}
+
+
 
 /*--------------------
 Page
@@ -162,9 +201,10 @@ section.hero {
   background: url('yellow.png');
   background-repeat: no-repeat;
   background-position: bottom center;
-  background-size: 100% auto;
+  background-size: cover;
   opacity: 0.75;
 }
+
 
 /*--------------------
 Call To Actions
@@ -190,6 +230,30 @@ Call To Actions
 .cta > span {
   font-size: 38px;
   font-weight: 600;
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 600px) {
+  .cta {
+    font-size: 50px;
+    max-width: 450px;
+    padding-bottom: 100px;
+  }
+  .cta > span {
+    font-size: 30px;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .cta {
+    max-width: 380px;
+  }
+  .cta > span {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
 }
 
 .button-cta, .button-nav-cta {
@@ -211,7 +275,7 @@ Call To Actions
 .button-cta {
   height: 46px;
   position: absolute;
-  float: left;
+  float: right;
   left: 370px;
   bottom: 69px;
   background-color: #f3bf02;
@@ -220,6 +284,17 @@ Call To Actions
   font-size: 24px;
   letter-spacing: -1px;
   z-index: 1;
+}
+
+@media (max-width: 600px) {
+  .button-cta {
+    bottom: 62px;
+    font-size: 20px;
+    letter-spacing: -1px;
+    min-width: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .button-cta:hover, .button-nav-cta:hover{

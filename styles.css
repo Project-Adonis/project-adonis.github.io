@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  background-color: #d0c7aa;
+  background-color: #e4dbc0;
 }
 
 
@@ -27,8 +27,8 @@ Screen
 ---------------------*/
 
 .screen {
-  width: 800px;
-  height: 485px;
+  width: 1000px;
+  height: 606.25px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -43,7 +43,7 @@ Screen
           box-shadow: 30px 30px 48px rgba(31,78,95,0.4);
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1050px) {
   .screen {
     width: 100%;
     height: auto;
@@ -147,7 +147,7 @@ Page
 
 .page {
   width: 100%;
-  height: 100%;
+  height: 125%;
   overflow-y: scroll;
 }
 
@@ -197,13 +197,19 @@ Hero
 
 section.hero {
   position: relative;
-  height: 485px;
+  height: 606.25px;
   padding: 60px;
   background: url('yellow.png');
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
   opacity: 0.75;
+}
+
+@media (max-width: 1050px) {
+  section.hero {
+    height: 485px;
+  }
 }
 
 
@@ -270,13 +276,19 @@ Call To Actions
   position: absolute;
   float: right;
   left: 370px;
-  bottom: 69px;
+  bottom: 189px;
   background-color: #f3bf02;
   border: 3px solid #272625;
   font-weight: 600;
   font-size: 24px;
   letter-spacing: -1px;
   z-index: 1;
+}
+
+@media (max-width: 1050px) {
+  .button-cta {
+    bottom: 69px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -443,11 +455,37 @@ Goal
 
 @media screen and (max-width: 450px) {
   p.speech {
-    width: 50px;
-    right: 80px;
+    right: 50px;
+  }
+  .id-signature {
+    right: 20px;
+  }
+  p.speech span {
+    padding-left: 2px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  p.speech {
+    right: 70px;
+  }
+  .id-signature {
+    right: 20px;
+  }
+  p.speech span {
+    padding-left: 2px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  p.speech {
+    right: 93px;
   }
   .id-signature {
     right: 40px;
+  }
+  p.speech span {
+    padding-left: 2px;
   }
 }
 
@@ -521,6 +559,8 @@ section.footer {
   padding: 40px 25px;
   background-color: #181818;
   text-align: center;
+  position: relative;
+  height: 45%;
 }
 
 .copy {

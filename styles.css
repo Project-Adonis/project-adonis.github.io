@@ -225,6 +225,11 @@ Call To Actions
   -webkit-box-shadow: 0px 7px 12px rgba(0,0,0,0.4);
      -moz-box-shadow: 0px 7px 12px rgba(0,0,0,0.4);
           box-shadow: 0px 7px 12px rgba(0,0,0,0.4);
+
+  white-space: pre-line; /* prevent text from wrapping onto multiple lines */
+  text-overflow: ellipsis; /* add ellipsis to indicate truncated text */
+  overflow: hidden; /* hide any text that overflows the element */
+        
 }
 
 .cta > span {
@@ -233,28 +238,65 @@ Call To Actions
   margin-bottom: 100px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 850px) {
   .cta {
-    font-size: 50px;
-    max-width: 450px;
-    padding-bottom: 100px;
+    width: 95%;
+    margin: 80px auto 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cta {
+    font-size: 40px;
+    text-align: center;
   }
   .cta > span {
     font-size: 30px;
     font-weight: 600;
+    margin-bottom: 30px;
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 485px) {
   .cta {
-    max-width: 380px;
+    font-size: 30px;
+    border: 10px solid #000;
+    text-align: center;
+    letter-spacing: -1.5px;
   }
   .cta > span {
-    font-size: 15px;
+    font-size: 26.5px;
     font-weight: 600;
-    margin-bottom: 5px;
   }
 }
+
+@media screen and (max-width: 395px) {
+  .cta {
+    width: 100%;
+    font-size: 27.5px;
+    border: 8px solid #000;
+    letter-spacing: -1px;
+    text-align: center;
+  }
+  .cta > span {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .cta {
+    width: 100%;
+    font-size: 21px;
+    border: 6px solid #000;
+    letter-spacing: -1px;
+  }
+  .cta > span {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
 
 .button-cta, .button-nav-cta {
   padding: 2px 23px;

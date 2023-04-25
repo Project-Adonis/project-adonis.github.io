@@ -424,19 +424,21 @@ Goal
 ---------------------*/
 
 .box-clients {
- 	width: 100px;
+ 	width: 20px;
  	height: 200px;
   padding-top: 10px;
   margin: auto;
-	position: absolute;
+	position: relative;
+  right: 25%;
 }
 
-@media screen and (max-width: 768px) {
-  .cta {
-    font-size: 45px;
+@media screen and (max-width: 450px) {
+  p.speech {
+    width: 50px;
+    right: 80px;
   }
-  .cta > span {
-    font-size: 40px;
+  .id-signature {
+    right: 40px;
   }
 }
 

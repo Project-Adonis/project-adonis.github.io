@@ -163,6 +163,7 @@ Page
   color: #f3bf02;
   text-align: center;
   margin-bottom: 4px;
+  margin-top: 10px;
 }
 
 .section-subtitle {
@@ -410,8 +411,16 @@ section.projects .projects-item:hover .item-text {
   background: rgba(39,38,37,1);
 }
 
+/* Styles for project items when screen is 715px or less */
+@media only screen and (max-width: 715px) {
+  section.projects .projects-item {
+    width: 100%;
+    margin: 0.5% 0;
+  }
+}
+
 /*--------------------
-"Goal"
+"Goal" Section
 ---------------------*/
 
 section.goal {

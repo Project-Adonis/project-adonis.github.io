@@ -30,9 +30,15 @@ function jump(h){
   container.animate({ scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop() - 70 }, 800);
 }
 
-const hamburger = document.querySelector('.hamburger');
-const menu = document.querySelector('.menu');
-
-hamburger.addEventListener('click', () => {
+function toggleMenu() {
+  const hamburger = document.querySelector('.hamburger');
+  const menu = document.querySelector('.menu');
+  console.log(hamburger);
+  console.log(menu);
+  hamburger.classList.toggle('active');
   menu.classList.toggle('show-menu');
-});
+}
+
+const hamburger = document.querySelector('.hamburger');
+hamburger.addEventListener('click', toggleMenu);
+

@@ -363,7 +363,7 @@ section.second-cta {
     position: relative;
     cursor: pointer;
     margin-left: 20px;
-    margin-top: 5.5px;
+    margin-top: 5px;
   }
   
   .hamburger-line {
@@ -385,11 +385,27 @@ section.second-cta {
   }
   
   .menu {
-    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: white;
+    z-index: 9999;
   }
   
-  .show-menu {
-    display: block;
+  .menu-button {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #272625;
+    text-decoration: none;
+  }
+  
+  .show-menu .menu {
+    height: 100%;
   }
   
   @media (min-width: 365px) {
@@ -400,8 +416,16 @@ section.second-cta {
       display: none;
     }
   }
+
+  .show-menu {
+    display: block;
+  }
+
+  .menu.show-menu {
+    display: flex;
+  }
 }
-  
+
 
 
 

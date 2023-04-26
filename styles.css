@@ -9,7 +9,7 @@ General Style
 
 body,
 html {
-  height: 100%;
+  height: 99%;
   font-family:'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -20,7 +20,11 @@ body {
   background-color: #e4dbc0;
 }
 
-
+@media (max-width: 1050px) {
+  body {
+    background-color: #f3bf02;
+  }
+}
 
 /*--------------------
 Screen
@@ -339,6 +343,61 @@ section.second-cta {
   text-align: center;
 }
 
+@media (max-width: 365px) {
+  .button-nav {
+    display: none;
+  }
+  .button-nav-cta {
+    display: none;
+  }
+  .hamburger-menu {
+    display: inline-block;
+  }
+  .hamburger-button {
+    font-size: 30px;
+    color: #272625;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+  }
+  .hamburger-content {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    display: none;
+    padding: 10px;
+    background-color: #f3bf02;
+    border: 2px solid #272625;
+    border-top: none;
+  }
+  .hamburger-content button {
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
+    color: #272625;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .hamburger-content button:hover {
+    background-color: #272625;
+    color: #f3bf02;
+  }
+  .hamburger-content.show {
+    display: block;
+  }
+}
+
+@media (min-width: 365px) {
+
+  .hamburger-menu {
+    display: none;
+  }
+}
+
 
 
 /*--------------------
@@ -379,7 +438,6 @@ section.projects .projects-item:hover {
 section.projects .projects-item .item-number {
   width: 100%;
   height: 100%;
-  position: absolute;
   top: -40px;
   left: 0px;
   font-size: 200px;
@@ -561,7 +619,7 @@ section.footer {
   background-color: #181818;
   text-align: center;
   position: relative;
-  height: 45%;
+  height: 35%;
 }
 
 .copy {
@@ -596,8 +654,9 @@ CTA Animations
 
 
 
-
-/*.cta and .cta > span font size adjustments*/
+/*--------------------
+.cta and .cta > span font size adjustments
+---------------------*/
 @media screen and (max-width: 768px) {
   .cta {
     font-size: 45px;

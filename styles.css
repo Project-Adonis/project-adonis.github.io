@@ -46,7 +46,8 @@ Screen
 @media (max-width: 1050px) {
   .screen {
     width: 100%;
-    height: auto;
+    min-height: 100vh;
+    margin: 0 auto;
     left: 0;
     top: 0;
     transform: none;

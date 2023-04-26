@@ -29,3 +29,10 @@ function jump(h){
   var container = $('.page'), scrollTo = $('#'+h);
   container.animate({ scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop() - 70 }, 800);
 }
+
+const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('.menu');
+
+hamburger.addEventListener('click', () => {
+  menu.classList.toggle('show-menu');
+});

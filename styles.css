@@ -26,6 +26,12 @@ body {
   }
 }
 
+.refresh {
+  background-color: transparent;
+  border: none;
+}
+
+
 /*--------------------
 Screen
 ---------------------*/
@@ -118,33 +124,6 @@ button:focus {
 	border-bottom: 5px #000 solid;
 }
 
-.menu-toggle {
-  position: absolute;
-  top: 24px;
-  right: 25px;
-  display: none;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-}
-
-.menu-toggle span {
-  display: block;
-  height: 2px;
-  background-color: #000;
-  margin-bottom: 8px;
-  position: relative;
-}
-
-.menu-toggle span:last-child {
-  margin-bottom: 0px;
-}
-
-.menu-toggle:hover span {
-  background-color: #555;
-}
-
-
 
 /*--------------------
 Page
@@ -193,7 +172,7 @@ Page
 }
 
 .negative {
-  color: #000;  
+  color: #222222;  
 }
 
 /*--------------------
@@ -288,6 +267,12 @@ Call To Actions
   font-size: 24px;
   letter-spacing: -1px;
   z-index: 1;
+}
+
+@media (max-width: 365px) {
+  .button-nav-cta {
+    display: none;
+  }
 }
 
 @media (max-width: 1050px) {
@@ -502,7 +487,7 @@ p.speech {
 	line-height: 1.0;
 	color: #868686;
 	background-color: #dddfe6;
-	padding: 30px 20px 30px 70px;
+	padding: 20px 20px 30px 70px;
 	margin: auto;
 	
 	-webkit-border-radius: 6px;
@@ -542,6 +527,7 @@ p.speech:before {
   float: left;
   top: 150px;
 	color: #5e5e5f;
+  max-width: 50vh;
 }
   
 /*--------------------
@@ -553,6 +539,7 @@ About
 	color: #484849;
   font-size: 20px;
   float: none;
+  padding-top: 10px;
 }
 
 
@@ -561,12 +548,13 @@ Footer
 ---------------------*/
 
 section.footer {
-  padding: 40px 25px;
+  padding: 20px 25px;
   background-color: #181818;
   text-align: center;
   position: relative;
   height: 40%;
 }
+
 
 .copy {
   font-size: 10px;

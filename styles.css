@@ -43,7 +43,7 @@ Screen
   top: 50%;
   left: 50%;
   background: rgb(243,191,2);
-  background: linear-gradient(180deg, rgba(243,191,2,1) 0%, rgba(39,38,37,1) 5%, rgba(39,38,37,1) 100%);
+  background: linear-gradient(180deg, rgba(243,191,2,1) 0%, rgba(39,38,37,1) 1%, rgba(39,38,37,1) 100%);
   overflow: hidden;
   
   -webkit-transform: translate(-50%, -50%);

@@ -194,7 +194,7 @@ section.hero {
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
-  opacity: 0.75;
+  opacity: 0.85;
 }
 
 @media (max-width: 1050px) {

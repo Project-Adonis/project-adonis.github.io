@@ -42,8 +42,8 @@ Screen
   position: absolute;
   top: 50%;
   left: 50%;
-  background: url('yellow.png'), linear-gradient(180deg, rgba(243,191,2,0.5) 0%, rgba(39,38,37,1) 1.5%, rgba(39,38,37,1) 100%);
-  background-blend-mode: screen;
+  background: rgb(243,191,2);  
+  background: linear-gradient(180deg, url('yellow.png') 0%, rgba(39,38,37,1) 1.5%, rgba(39,38,37,1) 100%);
   overflow: hidden;
   
   -webkit-transform: translate(-50%, -50%);

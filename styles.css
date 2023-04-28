@@ -43,6 +43,7 @@ Screen
   top: 50%;
   left: 50%;
   background: #272625;
+  background: linear-gradient(180deg, rgba(243,191,2,1) 0%, rgba(39,38,37,1) 0.5%, rgba(39,38,37,1) 100%);
   overflow: hidden;
   
   -webkit-transform: translate(-50%, -50%);
@@ -51,6 +52,12 @@ Screen
   -webkit-box-shadow: 30px 30px 48px rgba(31,78,95,0.4);
      -moz-box-shadow: 30px 30px 48px rgba(31,78,95,0.4);
           box-shadow: 30px 30px 48px rgba(31,78,95,0.4);
+}
+
+.screen::before {
+  content: "";
+  display: block;
+  height: 1px;
 }
 
 @media (max-width: 1050px) {

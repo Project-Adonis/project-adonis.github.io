@@ -12,12 +12,14 @@ html {
   height: 99%;
   font-family:'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: 400;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   background-color: #e4dbc0;
+  scroll-behavior: smooth;
 }
 
 @media (max-width: 1050px) {

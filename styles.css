@@ -24,13 +24,17 @@ body {
 
 @media (max-width: 1050px) {
   body {
-    background-color: #f3bf02;
+    background-color: #F2BE22;
   }
 }
 
 .refresh {
   background-color: transparent;
   border: none;
+}
+
+::selection {
+  background-color: rgb(242, 76, 61);
 }
 
 
@@ -44,7 +48,7 @@ Screen
   position: absolute;
   top: 50%;
   left: 50%;
-  background: linear-gradient(180deg, rgba(243,191,2,0) 0%, rgba(39,38,37,1) 1.5%, rgba(39,38,37,1) 100%);
+  background: linear-gradient(180deg, rgb(34, 166, 153) 0%, rgba(39,38,37,1) 1.5%, rgba(39,38,37,1) 100%);
   overflow: hidden;
   
   -webkit-transform: translate(-50%, -50%);
@@ -85,6 +89,9 @@ Navigation
   padding: 15px 25px;
   z-index: 9999;
   background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   -webkit-transition: all 0.3s;
      -moz-transition: all 0.3s;
       -ms-transition: all 0.3s;
@@ -132,6 +139,9 @@ button:focus {
 	border-bottom: 5px #000 solid;
 }
 
+.refresh {
+  cursor: pointer;
+}
 
 /*--------------------
 Page
@@ -152,7 +162,7 @@ Page
 .section-title {
   font-size: 36px;
   letter-spacing: -2px;
-  color: #f3bf02;
+  color: #F2BE22;
   text-align: center;
   margin-bottom: 4px;
   margin-top: 10px;
@@ -191,9 +201,7 @@ section.hero {
   position: relative;
   height: 606.25px;
   padding: 60px;
-  background: url('Pictures/yellow.png');
-  background-repeat: no-repeat;
-  background-position: bottom center;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1023%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(34%2c 166%2c 153%2c 1)'%3e%3c/rect%3e%3cpath d='M1560 560L0 560 L0 373.17Q31.01 332.19%2c 72 363.2Q81.56 300.76%2c 144 310.32Q165.57 259.89%2c 216 281.47Q260.7 254.17%2c 288 298.87Q346.63 285.5%2c 360 344.13Q386.5 298.63%2c 432 325.12Q457.61 278.73%2c 504 304.34Q562.02 290.36%2c 576 348.38Q620.03 272.41%2c 696 316.45Q723.49 271.94%2c 768 299.43Q848.73 260.16%2c 888 340.9Q958.7 291.6%2c 1008 362.29Q1021.97 304.26%2c 1080 318.24Q1151.17 269.41%2c 1200 340.58Q1268.29 288.87%2c 1320 357.16Q1388.88 306.04%2c 1440 374.91Q1483.15 298.07%2c 1560 341.22z' fill='rgba(239%2c 183%2c 15%2c 1)'%3e%3c/path%3e%3cpath d='M1488 560L0 560 L0 366.25Q56.12 302.37%2c 120 358.48Q191.75 358.23%2c 192 429.97Q224.99 342.96%2c 312 375.94Q378.69 322.63%2c 432 389.33Q504.81 342.14%2c 552 414.96Q566.98 357.94%2c 624 372.92Q689.05 317.97%2c 744 383.02Q766.11 333.13%2c 816 355.23Q857.74 324.97%2c 888 366.71Q930.12 336.83%2c 960 378.95Q1002.56 349.51%2c 1032 392.07Q1054.35 342.42%2c 1104 364.77Q1172.45 313.22%2c 1224 381.66Q1296.39 334.06%2c 1344 406.45Q1391.28 381.73%2c 1416 429Q1460.81 401.81%2c 1488 446.62z' fill='rgba(242%2c 151%2c 39%2c 1)'%3e%3c/path%3e%3cpath d='M1536 560L0 560 L0 499.51Q51.44 430.95%2c 120 482.39Q144.35 434.74%2c 192 459.08Q275.64 422.72%2c 312 506.35Q317.5 439.85%2c 384 445.35Q452.98 394.33%2c 504 463.31Q549.23 388.54%2c 624 433.78Q669.45 407.23%2c 696 452.67Q777.3 413.97%2c 816 495.26Q849.64 408.9%2c 936 442.55Q1004.25 390.8%2c 1056 459.05Q1136.19 419.25%2c 1176 499.44Q1228.87 432.31%2c 1296 485.18Q1370.38 439.57%2c 1416 513.95Q1448.39 426.35%2c 1536 458.74z' fill='rgba(242%2c 76%2c 61%2c 1)'%3e%3c/path%3e%3cpath d='M1464 560L0 560 L0 530.22Q85.34 495.56%2c 120 580.9Q123.34 512.24%2c 192 515.57Q221.25 472.82%2c 264 502.07Q340.28 458.35%2c 384 534.62Q460.22 490.84%2c 504 567.06Q554.07 497.13%2c 624 547.19Q667.84 471.03%2c 744 514.86Q790.89 489.75%2c 816 536.64Q872.9 521.54%2c 888 578.44Q934.63 505.08%2c 1008 551.71Q1060.15 483.87%2c 1128 536.02Q1177.32 513.34%2c 1200 562.65Q1229.88 472.52%2c 1320 502.4Q1367.01 477.41%2c 1392 524.42Q1441.23 501.65%2c 1464 550.88z' fill='rgba(39%2c 38%2c 37%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1023'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");  background-position: bottom center;
   background-size: cover;
   opacity: 1;
 }
@@ -212,7 +220,7 @@ Call To Actions
 .cta {
   height: 260px;
   width: 520px;
-  border: 12px solid #000;
+  border: 12px solid transparent;
   margin-top: 80px;
   padding: 20px;
   font-weight: 800;
@@ -221,14 +229,14 @@ Call To Actions
   color: #000;
   line-height: 0.8;
   
-  -webkit-box-shadow: 0px 7px 12px rgba(0,0,0,0.4);
-     -moz-box-shadow: 0px 7px 12px rgba(0,0,0,0.4);
-          box-shadow: 0px 7px 12px rgba(0,0,0,0.4);
+  -webkit-box-shadow: 0px 7px 12px rgba(0,0,0,0.5);
+     -moz-box-shadow: 0px 7px 12px rgba(0,0,0,0.5);
+          box-shadow: 0px 7px 12px rgba(0,0,0,0.5);
 
-  white-space: pre-line; /* prevent text from wrapping onto multiple lines */
-  text-overflow: ellipsis; /* add ellipsis to indicate truncated text */
-  overflow: hidden; /* hide any text that overflows the element */
-        
+  white-space: pre-line;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.25)
 }
 
 .cta > span {
@@ -269,8 +277,8 @@ Call To Actions
   float: right;
   left: 370px;
   bottom: 189px;
-  background-color: #f3bf02;
-  border: 3px solid #272625;
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 3px solid;
   font-weight: 600;
   font-size: 24px;
   letter-spacing: -1px;
@@ -280,6 +288,10 @@ Call To Actions
 @media (max-width: 378px) {
   .button-nav-cta {
     display: none;
+    }
+  
+  .nav {
+    background-color: none;
   }
 }
 
@@ -301,8 +313,8 @@ Call To Actions
 }
 
 .button-cta:hover, .button-nav-cta:hover{
-  background-color: #272625;
-  color: #f3bf02;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: #F2BE22;
   cursor: pointer;
   
   -webkit-box-shadow: 0px 7px 12px rgba(0,0,0,0.4);
@@ -311,7 +323,7 @@ Call To Actions
 }
 
 .button-cta:hover {
-  border: 3px solid #f3bf02;
+  border: 3px solid #F2BE22;
 }
 
 .button-nav-cta {
@@ -332,7 +344,7 @@ Call To Actions
 
 section.second-cta {
   padding: 60px;
-  background-color: rgba(243,191,2,1);
+  background-color: #F2BE22;
   text-align: center;
 }
 
@@ -368,7 +380,7 @@ section.projects .projects-item {
 }
 
 section.projects .projects-item:hover {
-  border: 3px solid #f3bf02;
+  border: 3px solid #F2BE22;
   -webkit-box-shadow: 14px 14px 24px rgba(0,0,0,0.4);
      -moz-box-shadow: 14px 14px 24px rgba(0,0,0,0.4);
           box-shadow: 14px 14px 24px rgba(0,0,0,0.4);
@@ -394,7 +406,7 @@ section.projects .projects-item .item-number {
 }
 
 section.projects .projects-item:hover .item-number {
-  color: #f3bf02;
+  color: #F2BE22;
 }
 
 section.projects .projects-item .item-text {
@@ -647,39 +659,35 @@ CTA Animations
 @media screen and (max-width: 435px) {
   .cta {
     font-size: 30px;
-    border: 10px solid #000;
   }
   .cta > span {
     font-size: 26.5px;
   }
 }
 
-@media screen and (max-width: 395px) {
+@media screen and (max-width: 400px) {
   .cta {
     width: 100%;
     font-size: 30px;
-    border: 8px solid #000;
   }
   .cta > span {
     font-size: 25px;
   }
 }
 
-@media screen and (max-width: 367px) {
+@media screen and (max-width: 374px) {
   .cta {
     width: 100%;
     font-size: 27.5px;
-    border: 8px solid #000;
   }
   .cta > span {
     font-size: 25px;
   }
 }
 
-@media screen and (max-width: 307px) {
+@media screen and (max-width: 314px) {
   .cta {
     font-size: 25px;
-    border: 6px solid #000;
   }
   .cta > span {
     font-size: 22.5px;
@@ -689,7 +697,6 @@ CTA Animations
 @media screen and (max-width: 289px) {
   .cta {
     font-size: 25px;
-    border: 6px solid #000;
   }
   .cta > span {
     font-size: 20.9px;

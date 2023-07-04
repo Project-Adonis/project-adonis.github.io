@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  background-color: #e4dbc0;
+  background-color: #FFFBE9;
   scroll-behavior: smooth;
 }
 
@@ -50,7 +50,8 @@ Screen
   left: 50%;
   background: linear-gradient(180deg, rgb(34, 166, 153) 0%, rgba(39,38,37,1) 1.5%, rgba(39,38,37,1) 100%);
   overflow: hidden;
-  
+  zoom: 125%;
+
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   
@@ -74,6 +75,7 @@ Screen
     top: 0;
     transform: none;
     box-shadow: none;
+    zoom: 100%;
   }
 }
 
@@ -301,7 +303,7 @@ Call To Actions
   }
 }
 
-@media (max-width: 600px) {
+/*@media (max-width: 600px) {
   .button-cta {
     bottom: 62px;
     font-size: 20px;
@@ -309,6 +311,12 @@ Call To Actions
     min-width: 170px;
     left: 50%;
     transform: translateX(-50%);
+  }
+}*/
+
+@media (max-width: 612px) {
+  .button-cta {
+    display: none;
   }
 }
 
@@ -611,94 +619,24 @@ CTA Animations
 /*--------------------
 .cta and .cta > span font size adjustments
 ---------------------*/
-@media screen and (max-width: 768px) {
-  .cta {
-    font-size: 45px;
-  }
+
+@media screen and (max-width: 850px) {
   .cta > span {
-    font-size: 40px;
+    padding-top: 25px;
   }
 }
 
-@media screen and (max-width: 595px) {
-  .cta {
-    font-size: 40px;
-  }
-  .cta > span {
-    font-size: 35px;
+@media screen and (max-width: 1000px) {
+  .button-cta {
+    align-items: center;
   }
 }
 
-@media screen and (max-width: 530px) {
-  .cta {
-    font-size: 40px;
-  }
-  .cta > span {
-    font-size: 30px;
-  }
+
+.cta {
+  font-size: clamp(22px, 7vw, 45px);
 }
 
-@media screen and (max-width: 485px) {
-  .cta {
-    font-size: 35px;
-  }
-  .cta > span {
-    font-size: 30px;
-  }
-}
-
-@media screen and (max-width: 465px) {
-  .cta {
-    font-size: 35px;
-  }
-  .cta > span {
-    font-size: 26px;
-  }
-}
-
-@media screen and (max-width: 435px) {
-  .cta {
-    font-size: 30px;
-  }
-  .cta > span {
-    font-size: 26.5px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .cta {
-    width: 100%;
-    font-size: 30px;
-  }
-  .cta > span {
-    font-size: 25px;
-  }
-}
-
-@media screen and (max-width: 374px) {
-  .cta {
-    width: 100%;
-    font-size: 27.5px;
-  }
-  .cta > span {
-    font-size: 25px;
-  }
-}
-
-@media screen and (max-width: 314px) {
-  .cta {
-    font-size: 25px;
-  }
-  .cta > span {
-    font-size: 22.5px;
-  }
-}
-
-@media screen and (max-width: 289px) {
-  .cta {
-    font-size: 25px;
-  }
-  .cta > span {
-    font-size: 20.9px;
-  }
+.cta > span {
+  font-size: clamp(17px, 6vw, 40px);
 }

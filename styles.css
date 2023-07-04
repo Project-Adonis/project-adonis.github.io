@@ -22,7 +22,7 @@ body {
   scroll-behavior: smooth;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1350px) {
   body {
     background-color: #F2BE22;
   }
@@ -66,7 +66,7 @@ Screen
   height: 1px;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1350px) {
   .screen {
     width: 100%;
     min-height: 100vh;
@@ -208,7 +208,7 @@ section.hero {
   opacity: 1;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1350px) {
   section.hero {
     height: 485px;
   }
@@ -219,33 +219,48 @@ section.hero {
 Call To Actions
 ---------------------*/
 
+.cta-container {
+  display: flex;
+  align-items: center;
+}
+
 .cta {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   height: 260px;
   width: 520px;
   border: 12px solid transparent;
-  margin-top: 80px;
+  margin-top: 50px;
   padding: 20px;
   font-weight: 800;
-	letter-spacing: -3px;
+  letter-spacing: -3px;
   font-size: 60px;
   color: #000;
-  line-height: 0.8;
-  
-  -webkit-box-shadow: 0px 7px 12px rgba(0,0,0,0.5);
-     -moz-box-shadow: 0px 7px 12px rgba(0,0,0,0.5);
-          box-shadow: 0px 7px 12px rgba(0,0,0,0.5);
+  line-height: 0.5;
+
+  -webkit-box-shadow: 0px 7px 12px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 7px 12px rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 7px 12px rgba(0, 0, 0, 0.5);
 
   white-space: pre-line;
   text-overflow: ellipsis;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.25)
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .cta > span {
   font-size: 38px;
   font-weight: 600;
   margin-bottom: 100px;
+  line-height: 1;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
+  align-items: center;
 }
+
+
 
 @media screen and (max-width: 850px) {
   .cta {
@@ -253,6 +268,12 @@ Call To Actions
     margin: 80px auto 0;
     text-align: center;
     letter-spacing: -1px;
+  }
+}
+
+@media screen and (max-width: 422px) {
+  .cta {
+    line-height: 1;
   }
 }
 
@@ -274,32 +295,41 @@ Call To Actions
 }
 
 .button-cta {
-  height: 46px;
-  position: absolute;
-  float: right;
-  left: 370px;
-  bottom: 189px;
+  padding: 2px 23px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+  color: #272625;
+  border-radius: 23px;
+  transition: all 0.3s;
   background-color: rgba(0, 0, 0, 0.25);
   border: 3px solid;
   font-weight: 600;
   font-size: 24px;
   letter-spacing: -1px;
+  position: absolute;
+  left: 370px;
+  bottom: 189px;
   z-index: 1;
 }
 
 @media (max-width: 378px) {
   .button-nav-cta {
     display: none;
-    }
+  }
   
   .nav {
     background-color: none;
   }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1350px) {
   .button-cta {
-    bottom: 69px;
+    bottom: 67px;
+  }
+}
+
+@media (min-width: 851px) {
+  .button-cta {
+    bottom: 97px;
   }
 }
 
@@ -614,24 +644,9 @@ CTA Animations
 }
 
 
-
-
 /*--------------------
 .cta and .cta > span font size adjustments
 ---------------------*/
-
-@media screen and (max-width: 850px) {
-  .cta > span {
-    padding-top: 25px;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .button-cta {
-    align-items: center;
-  }
-}
-
 
 .cta {
   font-size: clamp(22px, 7vw, 45px);

@@ -257,7 +257,6 @@ Call To Actions
   position: absolute;
   bottom: 0;
   transform: translateY(50%);
-  align-items: center;
 }
 
 
@@ -268,6 +267,10 @@ Call To Actions
     margin: 80px auto 0;
     text-align: center;
     letter-spacing: -1px;
+  }
+
+  .cta > span {
+    right: 0;
   }
 }
 

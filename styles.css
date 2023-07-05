@@ -55,9 +55,9 @@ Screen
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   
-  -webkit-box-shadow: 30px 30px 48px rgba(31,78,95,0.4);
-     -moz-box-shadow: 30px 30px 48px rgba(31,78,95,0.4);
-          box-shadow: 30px 30px 48px rgba(31,78,95,0.4);
+  -webkit-box-shadow: 30px 30px 48px rgba(0, 0, 0, 0.4);
+     -moz-box-shadow: 30px 30px 48px rgba(0, 0, 0, 0.4);
+          box-shadow: 30px 30px 48px rgba(0, 0, 0, 0.4);
 }
 
 .screen::before {
@@ -119,6 +119,7 @@ button:focus {
   padding: 0px 16px;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 16px;
+  font-weight: bold;
   line-height: 38px;
   text-align: center;
   position: relative;
@@ -246,7 +247,8 @@ Call To Actions
   white-space: pre-line;
   text-overflow: ellipsis;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.125);
+  backdrop-filter: blur(5px);
 }
 
 .cta > span {
@@ -303,7 +305,8 @@ Call To Actions
   color: #272625;
   border-radius: 23px;
   transition: all 0.3s;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3px);
   border: 3px solid;
   font-weight: 600;
   font-size: 24px;
@@ -336,20 +339,15 @@ Call To Actions
   }
 }
 
-/*@media (max-width: 600px) {
-  .button-cta {
-    bottom: 62px;
-    font-size: 20px;
-    letter-spacing: -1px;
-    min-width: 170px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}*/
-
 @media (max-width: 612px) {
   .button-cta {
     display: none;
+  }
+  .cta { 
+    border-radius: 10px;
+  }
+  .cta > span {
+    bottom: -25px;
   }
 }
 
@@ -457,13 +455,14 @@ section.projects .projects-item .item-text {
   float: left;
   top: 50%;
   left: 0px;
-  font-size: 22px;
+  font-size: 25px;
   letter-spacing: -1px;
   line-height: 1;
   color: #5e5e5f;
   text-align: center;
-  background: rgba(39,38,37,0.8);
+  background: rgba(39,38,37,0.5);
   z-index: 1;
+  font-weight: bold;
   
   -webkit-transform: translate(0%, -50%);
           transform: translate(0%, -50%);
@@ -474,11 +473,22 @@ section.projects .projects-item:hover .item-text {
   background: rgba(39,38,37,1);
 }
 
-/* Styles for project items when screen is 715px or less */
 @media only screen and (max-width: 715px) {
   section.projects .projects-item {
     width: 100%;
     margin: 0.5% 0;
+  }
+}
+
+@media only screen and (max-width: 728px) and (min-width: 716px) {
+  section.projects .projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  section.projects .projects-item {
+    width: calc(50% - 1%);
+    margin: 0.5%;
   }
 }
 

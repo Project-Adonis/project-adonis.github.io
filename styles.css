@@ -307,7 +307,7 @@ Call To Actions
   letter-spacing: -1px;
   position: absolute;
   left: 370px;
-  bottom: 189px;
+  bottom: 220px;
   z-index: 1;
 }
 
@@ -323,13 +323,13 @@ Call To Actions
 
 @media (max-width: 1350px) {
   .button-cta {
-    bottom: 67px;
+    bottom: 97px;
   }
 }
 
-@media (min-width: 851px) {
+@media (max-width: 851px) {
   .button-cta {
-    bottom: 97px;
+    bottom: 66px;
   }
 }
 

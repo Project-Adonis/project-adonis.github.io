@@ -346,8 +346,11 @@ Call To Actions
   .cta { 
     border-radius: 10px;
   }
+}
+
+@media (max-width: 612px) (min-width: 550px) {
   .cta > span {
-    bottom: -25px;
+    bottom: -50px;
   }
 }
 

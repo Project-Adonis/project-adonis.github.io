@@ -348,9 +348,9 @@ Call To Actions
   }
 }
 
-@media (max-width: 612px) (min-width: 550px) {
+@media (max-width: 612px) and (min-width: 550px) {
   .cta > span {
-    bottom: -50px;
+    bottom: -25px;
   }
 }
 
@@ -360,7 +360,7 @@ Call To Actions
   cursor: pointer;
   
   -webkit-box-shadow: 0px 7px 12px rgba(0,0,0,0.4);
-     -moz-box-shadow: 0px 7px 12px rgba(0,0,0,0.4);
+      -moz-box-shadow: 0px 7px 12px rgba(0,0,0,0.4);
           box-shadow: 0px 7px 12px rgba(0,0,0,0.4);
 }
 

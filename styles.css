@@ -1,6 +1,7 @@
 /*--------------------
 General Style
 ---------------------*/
+
 *,
 *::before,
 *::after {
@@ -18,7 +19,6 @@ html {
 }
 
 body {
-  background-color: #FFFBE9;
   scroll-behavior: smooth;
 }
 
@@ -675,4 +675,85 @@ CTA Animations
 
 .cta > span {
   font-size: clamp(17px, 6vw, 40px);
+}
+
+/*--------------------
+Dark/Light mode button
+---------------------*/
+
+.theme {
+  height: 5%;
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 1.75%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100px;
+  height: 52px;
+  border-radius: 100px;
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 15px;
+}
+
+.fa-moon {
+  color: lightseagreen;
+  height: 125%;
+}
+
+.fa-sun {
+  color: goldenrod;
+  height: 115%;
+}
+
+.checkbox-label .ball {
+  background-color: #fff;
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  border-radius: 100%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(48px);
+}
+
+@media (max-height: 850px) {
+  .checkbox-label {
+    top: 7px;
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+  }
+  .checkbox-label .ball {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+
+  }
+  .checkbox:checked + .checkbox-label .ball {
+    transform: translateX(24px);
+  }
+  .fa-moon {color: lightseagreen; height: 225%;}
+  .fa-sun {color: goldenrod; height: 225%;} 
 }

@@ -3,7 +3,7 @@ $(document).ready( function() {
     if ($(window).width() < 378) {
       $('.nav').css("background-color","rgba(243,191,2,0.98)");
       $('.nav').css("border-bottom","1px solid #f3bf02");
-      return; // exit the function if the screen is smaller than 378px
+      return;
     }
     if ($(this).scrollTop() > 70) {
       $('.nav').css("background-color","rgba(243,191,2,0.98)");
@@ -34,3 +34,15 @@ function jump(h){
   var container = $('.page'), scrollTo = $('#'+h);
   container.animate({ scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop() - 70 }, 800);
 }
+
+var $bg = $('body');
+
+  const checkbox = document.getElementById("checkbox");
+
+  checkbox.addEventListener("change", () => {
+    if (checkbox.checked) {
+      $bg.css({ 'background': '#41424C' });
+    } else {
+      $bg.css({ 'background': '#FFFBE9' });
+    }
+  });

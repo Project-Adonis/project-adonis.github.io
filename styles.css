@@ -754,6 +754,12 @@ Dark/Light mode button
   .checkbox:checked + .checkbox-label .ball {
     transform: translateX(24px);
   }
-  .fa-moon {color: lightseagreen; height: 225%;}
-  .fa-sun {color: goldenrod; height: 225%;} 
+  .fa-moon {
+    color: lightseagreen; 
+    height: 225%;
+  }
+  .fa-sun {
+    color: goldenrod; 
+    height: 225%;
+  } 
 }

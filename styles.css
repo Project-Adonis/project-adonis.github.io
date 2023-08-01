@@ -22,12 +22,6 @@ body {
   scroll-behavior: smooth;
 }
 
-@media (max-width: 1350px) {
-  body {
-    background-color: #F2BE22;
-  }
-}
-
 .refresh {
   background-color: transparent;
   border: none;

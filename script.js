@@ -35,14 +35,26 @@ function jump(h){
   container.animate({ scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop() - 70 }, 800);
 }
 
+
+/* BG Change */
 var $bg = $('body');
+const checkbox = document.getElementById("checkbox");
 
-  const checkbox = document.getElementById("checkbox");
-
-  checkbox.addEventListener("change", () => {
+function changeBackgroundColor() {
+  const screenWidth = window.innerWidth;
+  if (screenWidth < 1350) {
+    $bg.css({ 'background': '#F2BE22' });
+  } else {
     if (checkbox.checked) {
       $bg.css({ 'background': '#41424C' });
     } else {
       $bg.css({ 'background': '#FFFBE9' });
     }
-  });
+  }
+}
+
+changeBackgroundColor();
+
+checkbox.addEventListener("change", changeBackgroundColor);
+
+window.addEventListener("resize", changeBackgroundColor);

@@ -36,7 +36,25 @@ function jump(h){
 }
 
 
-/* BG Change */
+
+
+// Function to change the background color
+function changeBackgroundColor() {
+  const screenWidth = window.innerWidth;
+  const isDarkMode = localStorage.getItem('theme') === 'dark';
+
+  if (screenWidth < 1350) {
+    $bg.css({ 'background': '#F2BE22' });
+  } else {
+    if (isDarkMode) {
+      $bg.css({ 'background': '#41424C' });
+    } else {
+      $bg.css({ 'background': '#FFFBE9' });
+    }
+  }
+}
+
+// Function to change the background color
 var $bg = $('body');
 const checkbox = document.getElementById("checkbox");
 
@@ -52,6 +70,35 @@ function changeBackgroundColor() {
     }
   }
 }
+
+
+// Function to save the user's theme choice to localStorage
+function saveThemeChoice() {
+  localStorage.setItem('theme', checkbox.checked ? 'dark' : 'light');
+  changeBackgroundColor(); // Update the background color immediately when the theme is saved
+}
+
+// Function to load the user's theme choice from localStorage
+function loadSavedTheme() {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    checkbox.checked = true;
+  } else {
+    checkbox.checked = false;
+  }
+}
+
+// Call the function to load the saved theme when the page loads
+loadSavedTheme();
+
+// Event listener for the checkbox
+checkbox.addEventListener("change", function() {
+  saveThemeChoice();
+});
+
+// Event listener for window resize
+window.addEventListener("resize", changeBackgroundColor);
+
 
 changeBackgroundColor();
 

@@ -113,12 +113,6 @@ window.addEventListener("resize", changeBackgroundColor);
 
 
 
-
-
-
-
-
-
 // Skills Graphs
 
 

@@ -8,6 +8,21 @@ General Style
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background-color: #191a1d;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 1em;
+  background-color: #312d3c;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(242, 76, 61);
+}
+
 body,
 html {
   height: 99%;
@@ -641,9 +656,9 @@ About
 }
 
 .pentagon {
-  width: 300px;
-  height: 300px;
-  margin: auto;
+  width: 250px;
+  height: 250px;
+  margin: 0 25px 0 25px;
   padding: 3px 3px 28px 3px;
   display:inline-block;
 }

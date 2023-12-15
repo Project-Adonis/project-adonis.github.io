@@ -338,9 +338,9 @@ Call To Actions
   z-index: 1;
 }
 
-@media (max-width: 378px) {
+@media (max-width: 385px) {
   .button-nav-cta {
-    display: none;
+    display: none !important;
   }
 
   .nav {

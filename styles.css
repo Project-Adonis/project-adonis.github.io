@@ -52,7 +52,7 @@ Screen
 
 .screen {
   width: 1000px;
-  height: 606.25px;
+  height: 605px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -63,13 +63,7 @@ Screen
     rgba(39, 38, 37, 1) 100%
   );
   overflow: hidden;
-  zoom: 125%;
-
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-
-  -webkit-box-shadow: 30px 30px 48px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 30px 30px 48px rgba(0, 0, 0, 0.4);
+  transform: scale(1.25) translate(-40%, -40%);
   box-shadow: 30px 30px 48px rgba(0, 0, 0, 0.4);
 }
 
@@ -88,7 +82,7 @@ Screen
     top: 0;
     transform: none;
     box-shadow: none;
-    zoom: 100%;
+    transform: scale(1);
   }
 }
 
@@ -650,7 +644,7 @@ section.footer {
   background-color: #181818;
   text-align: center;
   position: relative;
-  height: 40%;
+  height: 36%;
 }
 
 .copy {

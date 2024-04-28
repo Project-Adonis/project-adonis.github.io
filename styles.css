@@ -435,6 +435,7 @@ section.projects .projects-item {
 
 section.projects .projects-item:hover {
   border: 3px solid #f2be22;
+  border-radius: 25px;
   -webkit-box-shadow: 14px 14px 24px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 14px 14px 24px rgba(0, 0, 0, 0.4);
   box-shadow: 14px 14px 24px rgba(0, 0, 0, 0.4);

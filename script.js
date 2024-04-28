@@ -24,10 +24,23 @@ $(document).ready(function () {
   });
 
   $("#scrollup").on("click", function () {
-    $(".page").animate({ scrollTop: 0 }, 800);
+    $(".page").animate({ scrollTop: 0 }, 500);
   });
 
-  $(".page").animate({ scrollTop: 2200 }, 0).animate({ scrollTop: 0 }, 4000);
+  $(".page")
+    .animate(
+      { scrollTop: 2200 },
+      {
+        duration: 0,
+      }
+    )
+    .animate(
+      { scrollTop: 0 },
+      {
+        duration: 2500,
+        easing: "easeOutExpo",
+      }
+    );
 });
 
 function jump(h) {
@@ -41,7 +54,7 @@ function jump(h) {
         container.scrollTop() -
         70,
     },
-    800
+    500
   );
 }
 
